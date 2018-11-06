@@ -1,7 +1,7 @@
 import numpy as np
 import networkx as nx
-input = np.loadtxt("distances5.txt", dtype='i' )
-graph = nx.Graph()
+input = np.loadtxt("tarea6\distances5.txt", dtype='i' )
+graph = nx.DiGraph()
 nodes = input.shape[1]
 
 graph.add_nodes_from([0,nodes-1])
@@ -14,7 +14,7 @@ for row in input:
     i = list(np_array).index(0)
     print(i)
     for column in row:
-        if column != 1 & column != 0:
+        if column != 1 and column != 0:
             graph.add_edge(i, j, weight=column)
         if j == nodes-1:
             j = 0
