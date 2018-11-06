@@ -14,7 +14,7 @@ for row in input:
     i = list(np_array).index(0)
     print(i)
     for column in row:
-        if column != 1 and column != 0:
+        if column != -1 and column != 0:
             graph.add_edge(i, j, weight=column)
         if j == nodes-1:
             j = 0
